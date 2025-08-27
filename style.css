@@ -1,0 +1,140 @@
+
+
+
+/* 1º PASSO - Para o DOBY vamos dar uma font-family arial */
+body {
+    font-family: arial;
+
+
+/* 2º PASSO - Vamos colocar a cor de fundo que é o DEGRADÊ */
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71)); /* TO RIGHT - para direita */
+}
+
+/* VEJAMOS QUE TUDO ISSO ESTÁ DENTRO DE UMA DIV COM UMA CLASS BOX */
+/* VAMOS CHAMAR ESSA CLASS ATRAVÉS DE UM PONTO(.) SEGUIDO DO NOME BOX */
+
+.box {
+    /* se quisermos deixar toda a fonte em branco - COLOR: white; retirando-o da LEGEND */
+    /* ASSIM TODO O NOSSO CONTEÚDO VAI FICAR COM A FONTE BRANCA */
+    
+    /*color: white; /* cor da letra */
+    position: absolute; /* para podermos centralizar - para ocupar apenas o elemento dela mesmo */
+    /* VAMOS CENTRALIZAR ATRAVÉS DE UM TOP 50% */
+    top: 50%; /* 50% de cima */
+    left: 50%; /* 50% da esquerda */
+    transform: translate(-50%, -50%); /* para centralizar- se -50% para esquerda e -50% para cima */
+    /* Pronto, centralizamos ele todo */
+
+    /* VAMOS COLOCAR A COR DO FUNDO MEIO TRANSPARENTE através de um BACKBROUND-COLOR */
+    background-color: rgba(0, 0, 0, 0.8); /* cor de fundo do formulário - RGBA - A é a opacidade */
+    padding: 15px; /* espaçamento interno ENTRE O ELEMENTO E A BORDA */
+    border-radius: 15px; /* borda arredondada - QUE SÃO AS BORDAS EXTERNAS */
+    width: 20%; /* largura do formulário */
+
+/* 3º PASSO - Vamos colocar a cor das letras (NOME COMPLETO, EMAIL, TELEFONE... */
+    color: white; /* cor da letra */
+    font-size: 14px; /* tamanho da letra */
+
+/* 4º PASSO - colocar a cor da borda EXTERMA em AZUL */
+    border: 2px solid rgb(0, BLUE, BLUE); /* borda - 2px de largura - SOLID - cor RGB */
+
+/* 5 PASSO - /* colocar a cor da borda interna em AZUL */
+/* Vamos chama-lo pelo nome que é FIELDSET*/
+
+fieldset {
+    border: 3px solid dodgerblue; /* borda - 3px de largura - SOLID - cor RGB */
+
+}    
+/* 6º PASSO - Vamos trabalhar com a nossa legenda: FORMULARIO DE CLIENTE */
+legend {
+    border: 1px solid dodgerblue; /* borda - 1px de largura - SOLID - cor RGB */
+    padding: 10px; /* espaçamento interno */
+    text-align: center; /* para centralizar o texto */
+    background-color: dodgerblue; /* cor de fundo */
+    border-radius: 8px; /* borda arredondada */
+    font-size: 15px; /* tamanho da letra */
+    color: white
+}
+
+/* 7º PASSO - Agora vamos colocar para o nosso INPUTBOX, que são essas divs, que tem o nosso INPUT, 
+a nossa LABEL */
+.inputBox {
+    position: relative; /* posição normal */  /* para podermos trabalhar com o LABEL */
+    margin-bottom: 10px; /* espaçamento entre os INPUTS */
+}
+
+/*8º PASSO - Agora para o nosso INPUT USER que são os nossos INPUTs */
+.inputUser {
+    background: none; /* sem fundo */
+    border: none; /* sem borda */
+    border-bottom: 1px solid white; /* borda inferior - 1px de largura - SOLID - cor branca */
+    outline: none; /* sem contorno */
+    color: white; /* cor da letra */
+    font-size: 15px; /* tamanho da letra */
+    width: 100%; /* largura total do elemento */
+    letter-spacing: 2px; /* espaçamento entre as letras */
+}
+
+/*9º PASSO - Vamos fazer as animações em: Nome completo, Email, Telefone, Cidade, Estado, Endereço */
+/* Onde cada LABEL vai para cima */
+/* E a DATA DE NASCIMENTO vamos deixar como LABEL também */
+/* Entao vamos definir uma CLASS para essas 6 LABEL */
+/* Vamos para o HTML e definir uma classe para cada uma delas - 9º PASSO DO HTML - Depois copie e cole em todos eles */
+
+/*10º PASSO - Feito isso, vamos manipula-los */
+
+/*10º.1 VAMOS FAZER A PARTE DA ANIMAÇÃO deixando o LABEL dentro do INPUT*/
+.labelInput { 
+    position: absolute; /* posição absoluta */
+    top: 0px; /* 0px de cima */
+    left: 0px; /* 0px da esquerda */
+    pointer-events: none; /* para não interferir no clique do mouse */
+    transition: 0.5s; /* transição de 0.5s */
+}
+
+/*11º PASSO - Observamos que ele não está executando nenhuma ação quando digitamos algo no INPUT */
+/* ELE não está indo para cima (os nomes) */
+
+/* Quando clicarmos no INPUT, o LABEL tem que ir para CIMA */
+
+/*ENTÃO A AÇÃO É NO INPUT */
+
+/*
+.inputUser:focus ~ .labelInput {
+    top: -20px; /* -20px de cima
+    font-size: 12px; /* tamanho da letra 
+    color: dodgerblue; /* cor da letra */
+} 
+
+/*12º PASSO - Só queo o LABEL está sendo esta ação apenas quando clicamos no INPUT */
+/*Quando digitamos algo dentro e saimos, LABEL está retornando */
+/*O que fazemos para resolver? */
+
+/*13º PASSO - Vamos refazer o 11º passo colocando uma virgula depois do LABELINPUT */
+/*Vamos desativar o 11º PASSO e refaze-lo */
+.inputUser:focus ~ .labelInput, /* quando o INPUT estiver em foco */
+.inputUser:valid ~ .labelInput { /* ou quando o INPUT estiver válido */
+    top: -20px; /* -20px de cima */
+    font-size: 12px; /* tamanho da letra */
+    color: dodgerblue; /* cor da letra */
+}
+
+/* ATENÇÃO !!!*/
+/*Quando clicamos no Email, e colocamos o mouse fora, o INPUT e o LABEL vai ficar em cima um do outro */
+/*A SOLUÇÃO é mudar o nome TYPE="EMAIL" para TYPE="TEXT" no HTML*/
+
+/*14º PASSO - Vamos trabalhar em cima da DATA DE NASCIMENTO */
+
+
+
+/* 15º PASSO - Agora vamos para o nosso BOTÃO DE ENVIO */
+#submit {
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71)); /* cor de fundo do botão - DEGRADÊ */
+    width: 100%; /* largura total do elemento */
+    border: none; /* sem borda NONE*/
+    padding: 15px; /* espaçamento interno */
+    color: white; /* cor da letra */
+    font-size: 15px; /* tamanho da letra */
+    cursor: pointer; /* cursor de mãozinha */
+    border-radius: 10px; /* borda arredondada */
+}
