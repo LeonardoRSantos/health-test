@@ -54,12 +54,12 @@ legend {
 /* EFEITO DE TRANSIÇÃO DO LABEL */
 .inputUser:focus ~ .labelInput,
 .inputUser:valid ~ .labelInput {
-    top: -20px;
+    top: -15px;
     font-size: 12px;
     color: dodgerblue;
 }
 
-#botao-enviar-formulario {
+#botao-salvar-formulario {
     background-color: rgb(49, 39, 188);
     width: 100%;
     border: none;
@@ -70,7 +70,7 @@ legend {
     border-radius: 10px;
 }
 
-#botao-enviar-formulario:hover {
+#botao-salvar-formulario:hover {
     transform: scale(1.02);
     box-shadow: 0 0 5px dodgerblue;
     background-color: rgb(41, 73, 161);
