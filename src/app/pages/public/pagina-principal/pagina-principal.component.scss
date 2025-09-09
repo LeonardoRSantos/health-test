@@ -54,7 +54,7 @@ legend {
 /* EFEITO DE TRANSIÇÃO DO LABEL */
 .inputUser:focus ~ .labelInput,
 .inputUser:valid ~ .labelInput {
-    top: -15px;
+    top: -16px;
     font-size: 12px;
     color: dodgerblue;
 }
