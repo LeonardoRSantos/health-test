@@ -31,6 +31,7 @@ legend {
 .inputBox {
     position: relative;
 }
+
 /* ESTILO DO INPUT */
 .inputUser {
     background: none;
@@ -54,8 +55,8 @@ legend {
 /* EFEITO DE TRANSIÇÃO DO LABEL */
 .inputUser:focus ~ .labelInput,
 .inputUser:valid ~ .labelInput {
-    top: -16px;
-    font-size: 12px;
+    top: -15px;
+    font-size: 13px;
     color: dodgerblue;
 }
 
